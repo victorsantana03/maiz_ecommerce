@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/119d948988.js" crossorigin="anonymous"></script>
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg-vinho">
+    <img src="../assets/rectangle.png" alt="" class="fixed top-0 left-10 -z-50">
+
+    <!-- HEADER -->
+    <header class="flex justify-between items-center bg-blue- px-10 mt-7 font-Playfair">
+        <img src="../assets/logo.svg" alt="logo-do-restaurante">
+
+        <nav class="hidden lg:flex">
+            <ul class="flex gap-16 text-white text-xl">
+                <li class="cursor-pointer transition duration-200 hover:text-mostarda-escuro">About</li>
+                <li class="cursor-pointer transition duration-200 text-mostarda-escuro">Menu</li>
+                <li class="cursor-pointer transition duration-200 hover:text-mostarda-escuro">Venue</li>
+                <li class="cursor-pointer transition duration-200 hover:text-mostarda-escuro">Events</li>
+            </ul>
+        </nav>
+
+        <!-- CARRINHO -->
+        <div class="flex items-center">
+            <button id="btn-cart"
+                class="bg-mostarda-escuro text-vinho font-bold text-lg px-4 lg:px-8 py-2 lg:py-4 flex rounded-l-md hover:opacity-95">
+                <p>My cart ( <span id="total-itens"></span> )</p>
+            </button>
+            <div>
+                <img src="../assets/img_button.svg" alt="" class="w-7 lg:w-9">
+            </div>
+        </div>
+        <!-- FIM CARRINHO -->
+
+    </header>
+    <!-- FIM HEADER -->
+
+    <!-- CONTEÚDO -->
+    <main class=" mx-10 lg:mx-32">
+
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6  mt-44 ">
+            <div class="flex flex-col items-start gap-8">
+                <div class="flex items-center gap-2">
+                    <h3 class="text-mostarda-escuro font-medium">OUR MENU</h3>
+                    <div class="border border-white w-14"></div>
+                </div>
+                <h1 class="text-7xl text-white font-Playfair">Discover <br> Our menu</h1>
+            </div>
+
+            <div class=" lg:w-1/3">
+                <p class="text-gray-300 text-xl font-medium">There is a wide selection of choices served by top Saudi
+                    chefs, prepared using best quality local ingredients.</p>
+            </div>
+        </div>
+
+        <nav class="mt-16">
+            <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1 md:flex gap-10 text-gray-400 font-medium text-lg">
+                <li class="text-white cursor-pointer">All</li>
+                <li class="cursor-pointer">Feast</li>
+                <li class="cursor-pointer">Coffee</li>
+                <li class="cursor-pointer">Cocktails</li>
+                <li class="cursor-pointer">Dessert</li>
+            </ul>
+        </nav>
+
+        <!-- MENU -->
+
+        <div id="menu" class="mt-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Bukhari.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Bukhari</p>
+                    <p class="text-white text-lg">R$120,00</p>
+                    <i id="add-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Bukhari" data-price="120.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Saudi Makboos.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Saudi Makboos</p>
+                    <p class="text-white text-lg">R$90,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Saudi Makboos" data-price="90.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Zurbiam.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Zurbiam</p>
+                    <p class="text-white text-lg">R$100,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Zurbiam" data-price="100.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Kabsa.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Kabsa</p>
+                    <p class="text-white text-lg">R$85,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Kabsa" data-price="85.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Madfoon.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Madfoon</p>
+                    <p class="text-white text-lg">R$110,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Madfoon" data-price="110.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Math Lootha.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Math Lootha</p>
+                    <p class="text-white text-lg">R$95,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Math Lootha" data-price="95.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Margoug.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Margoug</p>
+                    <p class="text-white text-lg">R$75,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Margoug" data-price="75.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Sayadya.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Sayadya</p>
+                    <p class="text-white text-lg">R$80,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Sayadya" data-price="80.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+            <!-- PEDIDO -->
+            <div>
+                <img src="../assets/Saleeg.png" alt="" class="w-full">
+                <div class="bg-bg-card py-4 px-5 flex items-center justify-between">
+                    <p class="text-white font-Playfair text-lg">Saleeg</p>
+                    <p class="text-white text-lg">R$65,00</p>
+                    <i id="icon-cart" class="fa-solid fa-cart-shopping text-mostarda-escuro text-lg cursor-pointer"
+                        data-name="Saleeg" data-price="65.00"></i>
+                </div>
+            </div>
+            <!-- FIM PEDIDO -->
+
+        </div>
+
+        <div class="flex justify-center mb-12">
+            <button
+                class="bg-vinho border border-white px-8 py-4 text-white font-Playfair text-xl transition duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
+                Show More
+            </button>
+        </div>
+
+    </main>
+    <!-- FIM CONTEÚDO -->
+
+    <!-- MENU CARRINHO -->
+    <div id="bg-cart" class="fixed top-0 w-full h-full justify-center items-center z-50 bg-black bg-opacity-30 hidden">
+
+        <div class="flex flex-col bg-bg-card min-w-96 lg:w-1/4 gap-4 p-7 rounded-md">
+            <h1 class="text-center text-mostarda-escuro font-bold text-3xl">Meu carrinho</h1>
+            <div id="cart-content" class="flex flex-col gap-3">
+
+            </div>
+
+            <p class="text-white text-xl font-bold">Total: <span id="cart-total"> </span></p>
+
+            <label class="text-mostarda-escuro font-medium text-lg">Endereço de entrega:</label>
+            <div>
+                <input id="input-cart" type="text" placeholder="Digite seu endereço completo"
+                    class="w-11/12 p-1 outline-none rounded-sm mb-2">
+                <span class="text-red-700 hidden " id="span-input">Digite seu endereço completo!</span>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button id="btn-close-card" class="text-mostarda-escuro font-medium">
+                    Fechar
+                </button>
+                <button id="btn-finish"
+                    class="bg-vinho p-2 rounded-md text-mostarda-escuro font-medium hover:opacity-85">
+                    Finalizar pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-bg-card w-full h-full flex justify-center">
+        <div class="flex flex-col items-center gap-px">
+            <p class="text-white font-bold font-Playfair">Victor Santana - 2024</p>
+            <div class="flex items-center gap-4 text-white">
+                <a href="https://www.linkedin.com/in/victor-alves-santana-111440196/"><i class="fa-brands fa-linkedin cursor-pointer"></i></a>
+                <a href="https://github.com/victorsantana03"><i class="fa-brands fa-github cursor-pointer"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- FIM MENU CARRINHO -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
